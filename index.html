@@ -4,79 +4,155 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ForestalDevel</title>
-<meta name="description" content="ForestalDevel — independent mobile app developer. CareReminder: private recurring reminders for Android.">
+<meta name="description" content="ForestalDevel — independent mobile app developer based in Lausanne, Switzerland. Makers of CandySort and CareReminder for Android.">
 <style>
   :root{
     --bg:#f6f5fb; --card:#ffffff; --fg:#1c1b22; --muted:#5c5a6b;
-    --accent:#4A39E0; --border:#e4e1f0;
+    --accent:#4A39E0; --accent2:#E0399B; --border:#e4e1f0; --chip:#f1eefb;
   }
   @media (prefers-color-scheme: dark){
     :root{ --bg:#141320; --card:#1e1c2e; --fg:#eceaf6; --muted:#a6a2bd;
-           --accent:#9d8dff; --border:#2e2b45; }
+           --accent:#9d8dff; --accent2:#ff8dcb; --border:#2e2b45; --chip:#2a2740; }
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--fg);
     font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     padding:16px}
-  .wrap{max-width:660px;margin:0 auto;padding:40px 0 64px}
-  header{display:flex;align-items:center;gap:16px;margin-bottom:8px}
-  header img{width:64px;height:64px;border-radius:16px}
-  h1{font-size:1.6rem;margin:0}
-  .tag{color:var(--muted);margin:0 0 36px}
+  .wrap{max-width:680px;margin:0 auto;padding:48px 0 64px}
+  h1{font-size:1.9rem;margin:0 0 6px;letter-spacing:-.02em}
+  .tag{color:var(--muted);margin:0 0 44px}
+  h2.sec{font-size:.8rem;text-transform:uppercase;letter-spacing:.09em;
+    color:var(--muted);margin:0 0 14px}
   .card{background:var(--card);border:1px solid var(--border);border-radius:16px;
-    padding:24px;margin-bottom:20px}
-  .card h2{margin:0 0 8px;font-size:1.15rem}
+    padding:24px;margin-bottom:16px}
+  .head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+  .badge{width:52px;height:52px;border-radius:14px;flex:0 0 auto;display:flex;
+    align-items:center;justify-content:center;color:#fff;font-weight:700;
+    font-size:1.05rem;letter-spacing:.02em}
+  .b1{background:linear-gradient(135deg,#4A39E0,#7d6bff)}
+  .b2{background:linear-gradient(135deg,#E0399B,#ff7ec4)}
+  .head h3{margin:0;font-size:1.2rem}
+  .head span{color:var(--muted);font-size:.92rem}
   .card p{margin:0 0 14px;color:var(--muted)}
-  ul{margin:0 0 16px;padding-left:20px;color:var(--muted)}
-  li{margin-bottom:6px}
-  a{color:var(--accent);font-weight:600}
+  h4{margin:18px 0 8px;font-size:.93rem;letter-spacing:.01em}
+  ul{margin:0 0 4px;padding-left:20px;color:var(--muted)}
+  li{margin-bottom:5px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+  .chip{background:var(--chip);border:1px solid var(--border);color:var(--muted);
+    border-radius:999px;padding:4px 12px;font-size:.84rem}
+  a{color:var(--accent)}
   .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
-    padding:10px 20px;border-radius:999px;font-weight:600}
-  footer{color:var(--muted);font-size:.9rem;text-align:center;margin-top:40px}
-  footer a{font-weight:400}
+    padding:10px 20px;border-radius:999px;font-weight:600;font-size:.95rem}
+  .btn.alt{background:var(--accent2)}
+  .links{margin-top:14px;font-size:.92rem}
+  .links a{font-weight:600;text-decoration:none}
+  footer{color:var(--muted);font-size:.88rem;text-align:center;margin-top:40px}
+  footer a{color:var(--muted)}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header>
-    <img src="logo.png" alt="CareReminder logo">
-    <div>
-      <h1>ForestalDevel</h1>
-      <p class="tag" style="margin:0">Independent mobile app developer — Lausanne, Switzerland</p>
-    </div>
-  </header>
+  <h1>ForestalDevel</h1>
+  <p class="tag">Independent mobile app developer — Lausanne, Switzerland</p>
 
+  <h2 class="sec">Our apps</h2>
+
+  <!-- ---------------- CandySort ---------------- -->
   <div class="card">
-    <h2>CareReminder</h2>
-    <p>Recurring reminders that actually stick. Organise them into lists —
-       drink water, move, take your medication — and track what you did.</p>
+    <div class="head">
+      <div class="badge b2">CS</div>
+      <div>
+        <h3>CandySort</h3>
+        <span>Puzzle game · Android · Free</span>
+      </div>
+    </div>
+
+    <p>The sweetest color-sorting puzzle. Pour, sort and match delicious candies
+       until every jar holds a single color. Simple to learn, wonderfully
+       relaxing, and surprisingly addictive — the perfect way to unwind while
+       giving your brain a gentle workout.</p>
+
+    <div class="chips">
+      <span class="chip">No timers</span>
+      <span class="chip">Works offline</span>
+      <span class="chip">Free to play</span>
+    </div>
+
+    <h4>How to play</h4>
     <ul>
-      <li>Flexible frequency: minutes, hours, days, weeks</li>
-      <li>Quiet hours so you're never woken up at night</li>
+      <li>Tap a jar to pour its top candies into another</li>
+      <li>Only matching colors can stack together</li>
+      <li>Sort every jar into a single color to clear the level</li>
+      <li>Think ahead — a little planning goes a long way</li>
+    </ul>
+
+    <h4>Features</h4>
+    <ul>
+      <li>100 handcrafted levels, from easy to brain-teasing</li>
+      <li>Smooth, satisfying candy animations</li>
+      <li>Relaxing sound effects and soft background music</li>
+      <li>A cute shop: unlock candy skins, jars and backgrounds</li>
+      <li>Daily rewards and gift chests to collect</li>
+      <li>Helpful hints and an extra-jar booster when you get stuck</li>
+      <li>Play 100% offline — no Wi-Fi required</li>
+    </ul>
+
+    <p style="margin-top:16px">No timers, no pressure — just calm, colorful
+       puzzles you can enjoy anytime. Whether you have five minutes or a whole
+       evening, CandySort is the cozy brain break you deserve.</p>
+
+    <a class="btn alt" href="https://play.google.com/store/apps/details?id=com.candysort.game">Get it on Google Play</a>
+    <div class="links">
+      <a href="https://sites.google.com/view/candysort-privacy-policy/accueil">Privacy policy →</a>
+    </div>
+  </div>
+
+  <!-- ---------------- CareReminder ---------------- -->
+  <div class="card">
+    <div class="head">
+      <div class="badge b1">CR</div>
+      <div>
+        <h3>CareReminder</h3>
+        <span>Health &amp; wellbeing · Android · Free</span>
+      </div>
+    </div>
+
+    <p>Recurring reminders that actually stick. Organise them into lists —
+       drink water, move, take your medication — set how often each one repeats,
+       and keep track of what you actually did.</p>
+
+    <div class="chips">
+      <span class="chip">Fully offline</span>
+      <span class="chip">No account</span>
+      <span class="chip">Free to use</span>
+    </div>
+
+    <h4>Features</h4>
+    <ul>
+      <li>Flexible frequency: minutes, hours, days or weeks</li>
+      <li>Quiet hours, so you're never woken up at night</li>
       <li>Pick the days of the week for each reminder</li>
       <li>“Done / Missed” tracking with progress charts</li>
+      <li>Organise reminders into colorful lists</li>
+      <li>Available in English, French, Spanish and German</li>
       <li>100% private — everything stays on your device</li>
     </ul>
+
     <a class="btn" href="https://play.google.com/store/apps/details?id=com.forestaldevel.carereminder">Get it on Google Play</a>
+    <div class="links">
+      <a href="https://sites.google.com/view/carereminder-privacy-policy/accueil">Privacy policy →</a>
+    </div>
   </div>
 
+  <h2 class="sec" style="margin-top:36px">Contact</h2>
   <div class="card">
-    <h2>Privacy</h2>
-    <p>CareReminder stores all of your data locally on your device and does not
-       send it to any server.</p>
-    <p><a href="https://sites.google.com/view/carereminder-privacy-policy/accueil">Read the full privacy policy →</a></p>
+    <p style="margin:0">Questions, bug reports or feedback — write to
+      <a href="mailto:forestaldevel@gmail.com">forestaldevel@gmail.com</a>.
+      We read every message.</p>
   </div>
 
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Questions, bug reports or feedback:
-       <a href="mailto:forestaldevel@gmail.com">forestaldevel@gmail.com</a></p>
-  </div>
-
-  <footer>
-    © ForestalDevel · <a href="app-ads.txt">app-ads.txt</a>
-  </footer>
+  <footer>© ForestalDevel · <a href="app-ads.txt">app-ads.txt</a></footer>
 
 </div>
 </body>
