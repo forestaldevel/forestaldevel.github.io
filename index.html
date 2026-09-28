@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ForestalDevel</title>
+<meta name="description" content="ForestalDevel — independent mobile app developer. CareReminder: private recurring reminders for Android.">
+<style>
+  :root{
+    --bg:#f6f5fb; --card:#ffffff; --fg:#1c1b22; --muted:#5c5a6b;
+    --accent:#4A39E0; --border:#e4e1f0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#141320; --card:#1e1c2e; --fg:#eceaf6; --muted:#a6a2bd;
+           --accent:#9d8dff; --border:#2e2b45; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:16px}
+  .wrap{max-width:660px;margin:0 auto;padding:40px 0 64px}
+  header{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+  header img{width:64px;height:64px;border-radius:16px}
+  h1{font-size:1.6rem;margin:0}
+  .tag{color:var(--muted);margin:0 0 36px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:24px;margin-bottom:20px}
+  .card h2{margin:0 0 8px;font-size:1.15rem}
+  .card p{margin:0 0 14px;color:var(--muted)}
+  ul{margin:0 0 16px;padding-left:20px;color:var(--muted)}
+  li{margin-bottom:6px}
+  a{color:var(--accent);font-weight:600}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    padding:10px 20px;border-radius:999px;font-weight:600}
+  footer{color:var(--muted);font-size:.9rem;text-align:center;margin-top:40px}
+  footer a{font-weight:400}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="logo.png" alt="CareReminder logo">
+    <div>
+      <h1>ForestalDevel</h1>
+      <p class="tag" style="margin:0">Independent mobile app developer — Lausanne, Switzerland</p>
+    </div>
+  </header>
+
+  <div class="card">
+    <h2>CareReminder</h2>
+    <p>Recurring reminders that actually stick. Organise them into lists —
+       drink water, move, take your medication — and track what you did.</p>
+    <ul>
+      <li>Flexible frequency: minutes, hours, days, weeks</li>
+      <li>Quiet hours so you're never woken up at night</li>
+      <li>Pick the days of the week for each reminder</li>
+      <li>“Done / Missed” tracking with progress charts</li>
+      <li>100% private — everything stays on your device</li>
+    </ul>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.forestaldevel.carereminder">Get it on Google Play</a>
+  </div>
+
+  <div class="card">
+    <h2>Privacy</h2>
+    <p>CareReminder stores all of your data locally on your device and does not
+       send it to any server.</p>
+    <p><a href="https://sites.google.com/view/carereminder-privacy-policy/accueil">Read the full privacy policy →</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Questions, bug reports or feedback:
+       <a href="mailto:forestaldevel@gmail.com">forestaldevel@gmail.com</a></p>
+  </div>
+
+  <footer>
+    © ForestalDevel · <a href="app-ads.txt">app-ads.txt</a>
+  </footer>
+
+</div>
+</body>
+</html>
